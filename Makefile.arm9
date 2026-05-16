@@ -13,7 +13,9 @@ ARM_NONE_EABI_PATH	?= $(WONDERFUL_TOOLCHAIN)/toolchain/gcc-arm-none-eabi/bin/
 
 TARGET      ?= mass-storage
 SOURCEDIRS	:= examples/$(TARGET)/arm9/source
-INCLUDEDIRS	:= examples/$(TARGET)/arm9/source examples/$(TARGET)/common
+INCLUDEDIRS	:= examples/$(TARGET)/arm9/source examples/$(TARGET)/common \
+                libs/libtwl/common/include \
+                libs/libtwl/libtwl9/include
 GFXDIRS		:=
 BINDIRS		:=
 AUDIODIRS	:=
@@ -28,8 +30,7 @@ DEFINES		:= -DLIBTWL_ARM9
 
 LIBS		:= -ltwl9 -lnds9
 LIBDIRS		:= $(BLOCKSDS)/libs/libnds \
-                libs/libtwl/libtwl9 \
-                libs/libtwl/common
+                libs/libtwl
 
 # Build artifacts
 # ---------------

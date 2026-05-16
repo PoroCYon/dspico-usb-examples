@@ -18,6 +18,8 @@ SOURCEDIRS	:=  examples/$(TARGET)/arm7/source \
 INCLUDEDIRS	:=  examples/$(TARGET)/arm7/source \
                 examples/$(TARGET)/common \
                 libs/tinyusb/src \
+                libs/libtwl/common/include \
+                libs/libtwl/libtwl7/include \
                 platform
 BINDIRS		:=
 
@@ -31,8 +33,7 @@ DEFINES		:= -DLIBTWL_ARM7
 
 LIBS		:= -ltwl7 -lnds7
 LIBDIRS		:= $(BLOCKSDS)/libs/libnds \
-                libs/libtwl/libtwl7 \
-                libs/libtwl/common
+                libs/libtwl
 
 # Build artifacts
 # -----------------
